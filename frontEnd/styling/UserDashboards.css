@@ -1,0 +1,370 @@
+/* Body with gradient violet-blue background */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*User navbar*/
+.user-navbar {
+    position: fixed;
+    width: 100%;
+    max-width:1000px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    border-radius: 25px;
+
+    display: flex;                     
+    justify-content: space-between;
+    align-items: center;               
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    z-index: 20;
+}
+
+
+/* Left part: logo and title*/
+.user-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-navbar-logo i {
+    width: 65px;
+    height: 65px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 65px;
+}
+
+/* User title */
+.user-navbar-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 
+        1px 1px 2px rgba(0,0,0,0.5),
+        0 0 8px rgba(138, 43, 226, 0.6);
+}
+
+/* Flex wrapper for right buttons */
+.user-navbar-right {
+    display: flex;
+    gap: 15px;           /* equal spacing between buttons */
+    align-items: center;
+}
+
+/* Make all right-side buttons equal width */
+.user-navbar-right button,
+.user-navbar-right .calendar-container button {
+    min-width: 130px;    /* uniform width */
+    text-align: center;
+}
+
+
+.manage-account-btn {
+    padding: 13px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 255, 0.25); /* subtle blue tint */
+    border: 1px solid rgba(0, 0, 255, 0.4);
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+/*Manage account button*/
+.manage-account-btn:hover {
+    background: rgba(0, 0, 255, 0.45);
+    transform: scale(1.05);
+}
+
+.calendar-container button {
+    padding: 13px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    background: rgba(255, 0, 0, 0.25);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.calendar-container button:hover {
+    background: rgba(255, 0, 0, 0.45);
+    transform: scale(1.05);
+}
+
+/* Page title*/
+.title{
+    text-align: center;
+    padding: 20px 40px; 
+    font-size: 40px;
+    color: white;
+    margin-top: 180px;
+    margin-bottom: 40px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+
+    /* Text shadow for glow */
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 10px rgba(138, 43, 226, 0.7),
+        0 0 20px rgba(30, 60, 114, 0.5);
+}
+
+
+/* Error message styling */
+/* Floating error pop-up */
+.error-message-container {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+
+    background: rgba(255, 60, 60, 0.35);
+    backdrop-filter: blur(12px);
+    padding: 0 20px;
+    border-radius: 45px;
+
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    opacity: 0;
+    pointer-events: none;
+
+    animation: error-slide-in 0.45s ease-out forwards;
+    z-index: 99999;
+}
+
+/*Messagge space with container*/
+.error-message-container i {
+    margin-right: 10px;
+}
+
+/*Icon for error message*/
+.error-message::before {
+    content: "\274C";          /* X icon */
+    display: inline-block;
+    margin-right: 8px;   
+    font-size: 25px;
+    vertical-align: middle;
+    /* Apply pulse animation */
+    animation: icon-pulse 1s infinite ease-in-out;
+}
+/* Shrink–grow effect */
+@keyframes icon-pulse {
+    0%, 100% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(0.6); /* Shrinks */
+    }
+}
+
+/* Slide + fade in */
+@keyframes error-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+/* Slide + fade out */
+.error-hide {
+    animation: error-slide-out 0.45s ease-in forwards;
+}
+@keyframes error-slide-out {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40px);
+    }
+}
+
+/*Message inside the container(Present office)*/
+.disorg {
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 45px;
+    font-weight: bold;
+}
+
+/*Icon for accessed office*/
+.disorg::before {
+    content: "\2705";          /* check icon */
+    display: inline-block;
+    margin-left: 20px;   
+    margin-right: 8px;
+    font-size: 25px;
+    vertical-align: middle;
+    /* Apply pulse animation */
+    animation: icon-pulse 1s infinite ease-in-out;
+}
+
+/* Shrink–grow effect */
+@keyframes icon-pulse {
+    0%, 100% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(0.6); /* Shrinks */
+    }
+}
+
+/*Message inside the container(No access)*/
+.error-message {
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 45px;
+    font-weight: bold;
+}
+
+
+/* Main container holding all tabs vertically */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* space between each tab-wrapper */
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 60px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 20px 20px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.main-container img{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 65px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+/* Each wrapper includes description + tab box */
+.tab-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between description and tab box */
+}
+
+/* Description box on top of each tab */
+.tab-description {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 10px rgba(138, 43, 226, 0.7),
+        0 0 20px rgba(30, 60, 114, 0.5);
+}
+
+/* Tab box */
+.tab-box {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3), -5px -5px 20px rgba(255,255,255,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tab-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.35), -8px -8px 25px rgba(255,255,255,0.15);
+}
+
+/* Left side (logo) */
+.tab-left {
+    display: flex;
+    justify-content: center;  /* horizontally center */
+    align-items: center;      /* vertically center */
+    background: rgba(0,0,0,0.3);
+    width: 30%;
+    height: 100%;
+}
+.tab-left img {
+    max-width: 70%;   /* constrain image size */
+    max-height: 70%;
+    margin: 0;        /* remove any default margin */
+    display: block;   /* remove inline spacing */
+    cursor: help;
+}
+
+.tab-left a{
+    display: flex;             /* flex inside the anchor */
+    justify-content: center;   /* center img horizontally */
+    align-items: center;       /* center img vertically */
+    width: 100%;               /* fill parent div */
+    height: 100%;              /* fill parent div */
+    text-decoration: none;     /* remove underline */
+}
+
+/* Right side (button) */
+.tab-right {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-button {
+    display: inline-block;
+    padding: 18px 35px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+}
+.tab-button:hover {
+    background: rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+

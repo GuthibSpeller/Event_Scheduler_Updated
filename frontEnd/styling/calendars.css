@@ -1,0 +1,488 @@
+/* GLOBAL BACKGROUND (unchanged) */
+body {
+     margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #6a0dad , #1e3c72 );
+    min-height: 100vh;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 0 0 18px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    gap: 15px;
+}
+
+/* Nav left* (logo and text)*/
+.nav-left {
+    display: flex;
+    align-items: center; /* vertically center logo and text */
+    gap: 12px; /* space between logo and text */
+}
+
+/* Logo image */
+.nav-left .logo {
+    width: 60px;
+    max-height: 60px;
+    border-radius: 100px;
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+/* Logo text */
+.nav-left .logo-text {    
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 20px;
+    color: #ffdfff;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.6),
+        0 0 10px #6a0dad,
+        0 0 20px #1e3c72;
+}
+
+/* Animation for Swirling calendar logo */
+.calendar-icon {
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    font-size: 50px;
+    color: #8e0bec;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.6),
+        0 0 10px rgba(106, 96, 121, 0.7),
+        0 0 20px rgba(227, 71, 255, 0.5); 
+    animation: sway 1s ease-in-out infinite;
+    transform-origin: center bottom; 
+}
+
+@keyframes sway {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(15deg); }   
+    50%  { transform: rotate(0deg); }    
+    75%  { transform: rotate(-15deg); }  
+    100% { transform: rotate(0deg); }
+}
+
+/* Animation for Bouncing letters */
+.bounce-text span {
+    display: inline-block;
+    animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Add delays for wave effect */
+.bounce-text span:nth-child(1)  { animation-delay: 0s; }
+.bounce-text span:nth-child(2)  { animation-delay: 0.05s; }
+.bounce-text span:nth-child(3)  { animation-delay: 0.1s; }
+.bounce-text span:nth-child(4)  { animation-delay: 0.15s; }
+.bounce-text span:nth-child(5)  { animation-delay: 0.2s; }
+.bounce-text span:nth-child(6)  { animation-delay: 0.25s; }
+.bounce-text span:nth-child(7)  { animation-delay: 0.3s; }
+.bounce-text span:nth-child(8)  { animation-delay: 0.35s; }
+.bounce-text span:nth-child(9)  { animation-delay: 0.4s; }
+.bounce-text span:nth-child(10) { animation-delay: 0.45s; }
+.bounce-text span:nth-child(11) { animation-delay: 0.5s; }
+.bounce-text span:nth-child(12) { animation-delay: 0.55s; }
+.bounce-text span:nth-child(13) { animation-delay: 0.6s; }
+.bounce-text span:nth-child(14) { animation-delay: 0.65s; }
+.bounce-text span:nth-child(15) { animation-delay: 0.7s; }
+.bounce-text span:nth-child(16) { animation-delay: 0.75s; }
+
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 600px;
+    transition: 0.3s;
+    padding: 4px;
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+}
+
+.search-bar:hover{
+    transform: scale(1.03);
+}
+.search-bar input {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.search-bar input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.search-bar button {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+}
+
+.search-bar button:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+/* Admin button container */
+.admin-button{
+padding: 13px 4px;
+backdrop-filter: blur(5px);
+border-radius: 16px;
+transition: 0.3s;
+}
+
+.admin-button:hover{
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.04);
+}
+
+.admin-btn {
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+/* Calendar Container */
+.calendar {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto 100px auto;
+    border-radius: 25px ;
+    background-color: #fbf5fd38;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    color: #333333;
+    flex: 1;
+}
+
+.calendar-container{
+    background-color: #2e123d;
+    border: 1px;
+}
+/* Header (month + navigation) */
+.calendar .header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    box-shadow: outset 0 2px 7px rgba(255,255,255,0.2);
+}
+
+/*Current month and year*/
+.calendar .header .current-date {
+    font-size: 22px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 18px;
+    border-radius: 12px;
+    text-shadow: 
+        1px 1px 3px rgba(0,0,0,0.6),
+        0 0 10px rgba(242, 60, 255, 0.7);
+    transition: 0.3s;
+}
+
+.calendar .header .current-date:hover{
+    transform: scale(1.03);
+}
+
+.calendar .header a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 14px;
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.18);
+    transition: 0.3s;
+}
+
+.calendar .header a:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.08) ;
+}
+
+/* Table / Grid for days */
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    table-layout: fixed;        
+}
+
+/* Today Highlight */
+.today {
+    background: rgba(255,255,255,0.4);
+    color: #d2eed4;
+    font-weight: bold;
+}
+
+/*Calendar header(Sat-Sun)*/
+th {
+    border: 1px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.501);
+    backdrop-filter: blur(10px);
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/*Days in the month*/
+td {
+    position: relative;
+    height: 80px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid rgba(46, 1, 45, 0.395);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    transition: 0.3s;
+}
+
+/* Hover on each day cell */
+td:hover {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    transform: scale(1.08);
+    border-radius: 12px;
+}
+/*Colors Saturday and sunday to red*/
+th.sun, th.sat {
+   color: #f4000094;
+}
+
+/*Week Header divider*/
+.week th {
+    border-right: 2px solid rgba(0,0,0,0.2); 
+}
+
+/* Inactive days (days from previous / next month) */
+.inactive {
+    color: #ffffff3c;
+    background: #f6a1ff6f;
+}
+
+.inactive:hover {
+    background-color: #ef6d6da8;
+    color: rgba(255, 255, 255, 0.341);               
+    cursor: not-allowed;        /*show it's inactive */
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5); 
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #8a2bee;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 90%;
+
+    max-height: 80vh;       
+    overflow-y: auto;       
+    box-sizing: border-box;
+}
+
+.modal-content ul {
+    padding-bottom: 20px;
+}
+
+/* Scrollbar styling */
+.modal-content::-webkit-scrollbar {
+    width: 10px;         }
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1); 
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8a2bee, #d85fff); 
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.2); 
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d85fff, #8a2bee); 
+}
+
+/*Scrollbar */
+.modal-content {
+    scrollbar-width: thin;
+    scrollbar-color: #8a2bee rgba(255,255,255,0.1);
+}
+
+
+/*Title inside the Modal(Event Description)*/
+.modal-title {
+    display: block;
+    text-align: center;   
+    width: 190px;
+    background-color: rgba(255,255,255,0.15);
+    padding: 6px 18px;
+    border-radius: 12px;
+    text-shadow: 
+        1px 1px 3px rgba(0,0,0,0.6),
+        0 0 10px rgba(203, 60, 255, 0.7);
+    margin: 0 auto;       
+}
+
+
+/*Date inside the modal*/
+.modal-date{
+    display: block; 
+    width: fit-content; 
+    margin: 0 auto;
+}
+
+/* Green highlight for days with events */
+.event-dot {
+    display: block;         
+    margin: 2px 0 0 6px;    
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #33ff33;
+    border: 1px solid black;
+    margin-top: 3px;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding-left: 0;         
+    display: inline-block;   
+    text-align: left;        
+}
+
+.modal li {
+    margin-bottom: 15px;     }
+
+.modal li ul {
+    list-style-type: circle; 
+    padding-left: 30px; 
+    margin: 0 auto;  
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+}
+
+
+
+.modal-close {
+    margin-top: 20px;
+    padding: 12px 20px;
+    width: 100%;
+
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.4);
+
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+.modal-close:hover {
+   background: rgba(255,255,255,0.4);
+}
+
+.footer {
+    position: fixed;       
+    bottom: 0;             
+    width: 100%;             
+    text-align: center;
+    padding: 20px;           
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px 20px 0 0; 
+    font-size: 20px;
+    color: #ffdfff;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 10px rgba(138, 43, 226, 0.7);
+    z-index: 20;
+    translate: 0.3s;
+    transition: transform 0.4s ease-in-out;
+    box-sizing: border-box;  
+}
+
+.footer:hover {
+    transform: translateY(20px); 
+}
+
+/* Responsive Navbar*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction:row;
+        align-items: center;
+    }
+    .search-bar {
+        width: 100%;
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,234 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Body with gradient violet-blue background */
+body.admin-body {
+    margin: 0;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Admin Navbar */
+.admin-navbar {
+    position: fixed;
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 25px;
+    border-radius: 25px;    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    z-index: 20;
+}
+
+/* Left part: logo + title + action buttons */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Empty logo placeholder */
+.navbar-logo i {
+    width: 65px;
+    height: 65px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 65px;
+}
+
+/* Navbar title */
+.navbar-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 
+        1px 1px 2px rgba(0,0,0,0.5),
+        0 0 8px rgba(138, 43, 226, 0.6);
+    margin-right: 60px;
+}
+
+/* Admin action buttons in navbar */
+.navbar-actions {
+    display: flex;
+    gap: 15px;
+}
+.navbar-actions button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background: rgba(0,0,0,0.25);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
+}
+.navbar-actions button:hover {
+    background: rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+
+/* Right part: logout button */
+.navbar-right button {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 255, 0.25); /* subtle blue tint */
+    border: 1px solid rgba(0, 0, 255, 0.4);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.navbar-right button:hover {
+    background: rgba(0, 0, 255, 0.45);
+    transform: scale(1.05);
+}
+
+/* Page title with glassy background and text shadow */
+.title{
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 30px;
+    color: white;
+    margin-top: 130px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 10px rgba(138, 43, 226, 0.7),
+        0 0 20px rgba(30, 60, 114, 0.5);
+}
+
+/* Main container for stacked tabs */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* space between each tab-wrapper */
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 20px 20px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* Tab wrapper: description + tab box */
+.tab-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Description box on top of each tab */
+.tab-description {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 10px rgba(138, 43, 226, 0.7),
+        0 0 20px rgba(30, 60, 114, 0.5);
+}
+
+/* Tab box with left logo + right button */
+.tab-box {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3), -5px -5px 20px rgba(255,255,255,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tab-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.35), -8px -8px 25px rgba(255,255,255,0.15);
+}
+
+/* Left side: logo */
+.tab-left {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    background: rgba(0,0,0,0.3);
+    width: 30%;
+    height: 100%;
+}
+
+.tab-left img {
+    max-width: 70%;   /* constrain image size */
+    max-height: 70%;
+    margin: 0;        /* remove any default margin */
+    display: block;   /* remove inline spacing */
+    cursor: help;
+    border-radius: 65px;
+
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 65px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: help;
+}
+
+.tab-left a{
+    display: flex;             /* flex inside the anchor */
+    justify-content: center;   /* center img horizontally */
+    align-items: center;       /* center img vertically */
+    width: 100%;               /* fill parent div */
+    height: 100%;              /* fill parent div */
+    text-decoration: none;     /* remove underline */
+}
+
+/* Right side: button */
+.tab-right {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-button {
+    display: inline-block;
+    padding: 18px 35px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+}
+.tab-button:hover {
+    background: rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}

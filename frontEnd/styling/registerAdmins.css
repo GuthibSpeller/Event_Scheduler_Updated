@@ -1,0 +1,211 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body scrollable and spacing for title */
+body.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    overflow-y: auto;
+    padding-top: 120px; /* space for fixed title */
+}
+
+/* Apply to scrollable container */
+.form-container::-webkit-scrollbar {
+    width: 10px;          /* width of the scrollbar */
+}
+
+.form-container::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1); /* track color */
+    border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8a2bee, #d85fff); /* gradient thumb */
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.2); /* padding around thumb */
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d85fff, #8a2bee); /* hover effect */
+}
+
+/* Firefox scrollbar */
+.form-container {
+    scrollbar-width: thin;
+    scrollbar-color: #8a2bee rgba(255,255,255,0.1);
+}
+
+/* Fixed title container */
+.title-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 340px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+/* Form title */
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 8px rgba(138,43,226,0.6);
+}
+
+/* Form container */
+.form-container {
+    width: 400px;
+    max-width: 90%;
+    padding: 40px 30px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+/* Input container */
+.input-container {
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+/* Inputs and select */
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.register-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form input:hover,
+.register-form select:hover {
+    background: rgba(248, 248, 248, 0.416);
+    border: 1px solid rgba(138,43,226,0.8);
+    box-shadow: 0 0 15px rgba(138,43,226,0.7), 0 0 25px rgba(30,60,114,0.5);
+    transform: scale(1.05);
+}
+
+/* Radio group container */
+.radio-group-container {
+    margin  : 30px;
+    text-align: center;
+}
+
+.radio-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.radio-group input {
+    accent-color: #007c04;
+}
+
+/* Buttons */
+.subbutton, .backbutton {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: rgba(138,43,226,0.8);
+    transition: 0.3s;
+}
+
+.subbutton:hover, .backbutton:hover {
+    background: rgba(160, 87, 229, 0.719);
+    transform: scale(1.04);
+}
+
+
+
+/* Dropdown options */
+.select-control option {
+    background: rgba(65,0,127,0.9);
+    color: white;
+    padding: 10px 20px 10px 10px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.select-control {
+    text-indent: 0.5em;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-container {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+}
