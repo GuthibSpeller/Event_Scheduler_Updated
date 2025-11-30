@@ -1,11 +1,11 @@
-/* Global reset */
+/* ===========================
+   General Resets
+=========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Background matches your theme */
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #6a0dad, #1e3c72);
@@ -15,7 +15,9 @@ body {
     align-items: center;
 }
 
-/* Navbar*/
+/* ===========================
+   Navbar
+=========================== */
 .navbar {
     position: fixed;
     padding: 20px 40px;
@@ -114,7 +116,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Glass container around the whole table */
+/* ===========================
+  Table  Container
+=========================== */
 .table-container {
     width: 90%;
     max-width: 1300px;
@@ -130,7 +134,7 @@ body {
 }
 
 /* Main table styling */
-.glass-table {
+.table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 20px;
@@ -138,12 +142,12 @@ body {
 }
 
 /* Table header */
-.glass-table thead {
+.table thead {
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(12px);
 }
 
-.glass-table th {
+.table th {
     padding: 15px 18px;
     color: white;
     font-weight: 700;
@@ -155,7 +159,7 @@ body {
 }
 
 /* Rows */
-.glass-table td {
+.table td {
     padding: 12px 18px;
     color: white;
     font-size: 16px;
@@ -164,13 +168,13 @@ body {
 }
 
 /* Hover effect on rows */
-.glass-table tbody tr {
+.table tbody tr {
     transition: background 0.4s, transform 0.3s; /* smooth transition */
   
 }
 
 /* Row hover — soft glow */
-.glass-table tbody tr:hover {
+.table tbody tr:hover {
     background: rgba(255,255,255,0.18);
     backdrop-filter: blur(14px);
     cursor: pointer;
@@ -178,7 +182,9 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Back button */
+/* ===========================
+   Back Button
+=========================== */
 .back-container {
     margin-top: 35px;
     margin-bottom: 40px;

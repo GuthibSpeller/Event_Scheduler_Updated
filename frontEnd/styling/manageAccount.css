@@ -1,4 +1,6 @@
-/* GLOBAL BODY */
+/* ===========================
+   General Resets
+=========================== */
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
@@ -10,7 +12,9 @@ body {
     min-height: 100vh;
 }
 
-/* NAVBAR */
+/* ===========================
+   Navbar
+=========================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,11 +57,11 @@ body {
     padding: 0;
 }
 
-/* Uniform button size */
+/* Button size */
 .nav-right button,
 .nav-right form button {
     padding: 12px 20px;
-    min-width: 160px;           /* uniform width */
+    min-width: 160px;          
     border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
@@ -113,7 +117,9 @@ body {
 }
 
 
-/* CENTER CONTAINER */
+/* ===========================
+   Container Styling
+=========================== */
 #edit-account-container {
     position: relative; /* allows top/bottom adjustments */
     margin: 20px auto;  /* auto centers horizontally */
@@ -133,9 +139,9 @@ body {
 
 .inner-title {
     position: fixed;
-    top: 20px;          /* distance from top */
-    left: 50%;          /* move to 50% from left */
-    transform: translateX(-50%); /* shift back by half its width */
+    top: 20px;          
+    left: 50%;          
+    transform: translateX(-50%); 
     font-size:20px ;
     text-shadow: 
         1px 1px 3px rgba(0,0,0,0.6),
@@ -152,7 +158,9 @@ body {
     max-width: 200px;
 }
 
-/* Forms inside container */
+/* ===========================
+   Form Styling
+=========================== */
 #edit-account-container form {
     display: flex;
     flex-direction: column;
@@ -197,7 +205,9 @@ body {
     transform: scale(1.05);
 }
 
-/* MODAL */
+/* ===========================
+   Modal Styling
+=========================== */
 .modal {
     display: none;
     position: fixed;
@@ -274,7 +284,9 @@ body {
     }
 }
 
-/* Change Password modal input */
+/* ===========================
+   Change password Modal Styling
+=========================== */
 #passwordModal input[type="password"] {
     padding: 12px;
     border-radius: 15px;
@@ -323,12 +335,14 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(138,43,226,0.8), 0 0 10px rgba(19, 17, 17, 0.5);
 }
-
+/* ===========================
+   Error Message Styling
+=========================== */
 .confirm-pass-error-message-container {
 position: fixed;
-    top: 20px; /* initial position */
+    top: 20px; 
     left: 50%;
-    transform: translateX(-50%) translateY(0); /* start at normal position */
+    transform: translateX(-50%) translateY(0); 
     background: rgba(255, 60, 60, 0.8);
     padding: 15px 25px;
     border-radius: 25px;
@@ -342,7 +356,7 @@ position: fixed;
     justify-content: center;
     text-align: center;
     opacity: 1;
-    transition: transform 0.4s ease; /* only slide */
+    transition: transform 0.4s ease; 
 }
 
 .confirm-pass-error-message-container p {
@@ -351,7 +365,7 @@ position: fixed;
 
 .error-hide {
     opacity: 0;
-     transform: translateX(-50%) translateY(-20px); /* move up 20px */
+     transform: translateX(-50%) translateY(-20px); 
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 

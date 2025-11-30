@@ -1,4 +1,6 @@
-    /* General reset */
+/* ===========================
+   General Resets
+=========================== */
     * {
         margin: 0;
         padding: 0; 
@@ -26,7 +28,7 @@
         backdrop-filter: blur(10px);
     }
 
-    /* Left side: Logo + message (glass effect) */
+    /* Left side: Logo and message*/
     .login-left {
         flex: 1;
         background: rgba(255, 255, 255, 0.1);
@@ -101,7 +103,7 @@
     .right-pointer::after {
         content: "\2192";          /* right arrow */
         display: inline-block;
-        margin-left: 8px;      /* spacing from text */
+        margin-left: 8px;      
         font-size: 25px;
         transition: transform 0.3s ease;
     }
@@ -133,13 +135,17 @@
         border-left: 1px solid rgba(255,255,255,0.2);
     }
 
-    /* Login container */
+    /* ===========================
+    Login Form Styling
+    =========================== */
     .login-container {
         width: 100%;
         
     }
 
-    /* Fieldset with glass effect */
+    /* ===========================
+    Fieldset Styling
+    =========================== */
     .fieldset {
         border: none;
         padding: 20px;
@@ -171,7 +177,9 @@
         border-radius: 25px;
     }
 
-    /* Input containers */
+    /* ===========================
+        Login Components Styling
+    =========================== */
     .login-fieldset .user-name,
     .login-fieldset .password {
         position: relative;
@@ -217,7 +225,11 @@
     .login-fieldset input:hover{
         background-color:rgba(255, 255, 255, 0.444);
     }
-    /* Submit button */
+
+   /* ===========================
+        Submit and Back Buttons
+    =========================== */
+
     .subbutton {
         width: 100%;
         padding: 12px;
@@ -278,8 +290,9 @@
         }
     }
 
-    /*Error styling(Invalid username/password)*/
-    /* Error message styling */
+    /* ===========================
+        Error Message Styling
+    =========================== */
     /* Floating error pop-up */
     .login-error-message-container {
         position: fixed;
@@ -312,7 +325,7 @@
     .login-error-message-container i {
         margin-right: 10px;
     }
-    /* Slide + fade in */
+    /* Slide and fade in */
     @keyframes error-slide-in {
         from {
             opacity: 0;
@@ -323,7 +336,7 @@
             transform: translateX(-50%) translateY(0);
         }
     }
-    /* Slide + fade out */
+    /* Slide and fade out */
     .login-error-hide {
         animation: error-slide-out 0.45s ease-in forwards;
     }

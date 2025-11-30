@@ -54,7 +54,7 @@ if ($searchTerm !== '') {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styling/calendars.css">
+<link rel="stylesheet" href="styling/calendar.css">
 <script src="eventscript.js" defer></script>
 
 <script>
@@ -67,7 +67,7 @@ const searchResults = <?= json_encode($searchResults); ?>;
 
     <nav class="navbar">
         <div class="nav-left">
-        <img src="images/CIS_logo.png" class="logo" alt="Logo">
+        <img src="images/logohuhu.png" class="logo" alt="Logo">
         
         <!-- Wrap each letter in spans for bouncing animation -->
         <span class="logo-text bounce-text">

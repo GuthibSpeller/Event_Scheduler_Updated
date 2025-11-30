@@ -164,6 +164,20 @@ body {
     margin-right: 100px;
 }
 
+/* Dropdown options */
+.modal-input option {
+    background: rgba(65,0,127,0.9);
+    color: white;
+    padding: 10px 20px 10px 10px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.modal-input {
+    text-indent: 0.9em;
+}
+
+
 .dashboard-filters select {
     padding: 10px 15px;
     border-radius: 12px;
@@ -181,7 +195,7 @@ body {
 }
 
 /* ===========================
-   Styled Dropdowns: Glass + Glow
+   Styled Dropdowns
 =========================== */
 .filterSort,
 .filterStatus {
@@ -254,7 +268,7 @@ body {
     text-align: left;
 }
 
-/* HEADER HOVER EFFECT — to match rows */
+/* HEADER HOVER EFFECT*/
 .table-header .table-cell:hover {
     background: rgba(1, 1, 1, 0.6);
     backdrop-filter: blur(14px);

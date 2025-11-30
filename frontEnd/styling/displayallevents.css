@@ -1,11 +1,12 @@
-/* Global Reset */
+/* ===========================
+   General Resets
+=========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body background and font */
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #6a0dad, #1e3c72);
@@ -16,7 +17,9 @@ body {
     padding: 20px 0;
 }
 
-/* Navbar / Title bar */
+/* ===========================
+  Navbar
+=========================== */
 .title {
     position: fixed;
     width: 90%;
@@ -88,7 +91,6 @@ body {
 }
 
 /*Drop down button*/
-/* Styled Drop-downs (glassmorphism + glow) */
 .select-control {
     position: relative;
     padding: 12px 15px;
@@ -107,7 +109,6 @@ body {
     transition: 0.3s;
 }
 
-/* Hover and focus glow effect */
 .select-control:hover,
 .select-control:focus {
     background: rgba(0, 0, 0, 0.2);
@@ -124,8 +125,9 @@ body {
 
 }
 
-
-/* Glass container for table */
+/* ===========================
+   Table Styling
+=========================== */
 .table-container {
     width: 90%;
     max-width: 1200px;
@@ -140,18 +142,18 @@ body {
 }
 
 /* Table styles */
-.glass-table {
+.table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed; /* ensures all columns share width evenly */
     border-radius: 20px;
  
 }
-.glass-table td:first-child {
+.table td:first-child {
     text-align: left;
 }
 
-.glass-table th {
+.table th {
     font-weight: bold;
     font-size: 18px;
     padding:20px;
@@ -168,7 +170,7 @@ body {
 }
 
 /*Content of Table(table head and table)*/
-.glass-table td {
+.table td {
      padding: 12px 10px;
     text-align: center; /* centers cell content */
     color: white;
@@ -178,17 +180,17 @@ body {
     cursor: pointer;
 }
 
-.glass-table tbody tr:nth-child(even){
+.table tbody tr:nth-child(even){
     background: rgba(255,255,255,0.05);
 }
 
 /* Hover effect on rows */
-.glass-table tbody tr {
+.table tbody tr {
     transition: background 0.4s, transform 0.3s; /* smooth transition */
   
 }
 
-.glass-table tbody tr:hover {
+.table tbody tr:hover {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(14px);    
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -217,6 +219,7 @@ body {
     
     color: #FF4500;
 }
+
 
 /* Responsive table */
 @media (max-width: 900px) {

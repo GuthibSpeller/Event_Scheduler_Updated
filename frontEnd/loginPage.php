@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="login-page">
     <div class="login-wrapper">
         <div class="login-left">
-            <img src="images/CIS_logo.png" alt="Logo">
+            <img src="images/logohuhu.png" alt="Logo">
             <h2>Welcome Back!</h2> <div class="waving-hand"><i class="fa-solid fa-hand"></i></div>
             <p class="right-pointer">Access the panel</p>
         </div>

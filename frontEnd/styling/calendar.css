@@ -1,4 +1,6 @@
-/* GLOBAL BACKGROUND (unchanged) */
+/* ===========================
+   General Resets
+=========================== */
 body {
      margin: 0;
     font-family: "Montserrat", sans-serif;
@@ -10,7 +12,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-/* Navbar */
+/* ===========================
+   Navbar Styling
+=========================== */
 .navbar{
     display: flex;
     align-items: center;
@@ -182,7 +186,9 @@ transition: 0.3s;
     
 }
 
-/* Calendar Container */
+/* ===========================
+   Calendar Container Styling
+=========================== */
 .calendar {
     width: 100%;
     max-width: 900px;
@@ -199,7 +205,7 @@ transition: 0.3s;
     background-color: #2e123d;
     border: 1px;
 }
-/* Header (month + navigation) */
+/* Header (month and navigation) */
 .calendar .header {
     margin-bottom: 20px;
     display: flex;
@@ -258,6 +264,9 @@ table {
     background: rgba(255,255,255,0.4);
     color: #d2eed4;
     font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-decoration: underline;
+    text-decoration-color: #000000;
 }
 
 /*Calendar header(Sat-Sun)*/
@@ -315,8 +324,9 @@ th.sun, th.sat {
     color: rgba(255, 255, 255, 0.341);               
     cursor: not-allowed;        /*show it's inactive */
 }
-
-/* MODAL */
+/* ===========================
+  Event Modal
+=========================== */
 .modal {
     display: none;
     position: fixed;
@@ -451,6 +461,9 @@ th.sun, th.sat {
    background: rgba(255,255,255,0.4);
 }
 
+/* ===========================
+    Footer
+=========================== */
 .footer {
     position: fixed;       
     bottom: 0;             
@@ -475,7 +488,9 @@ th.sun, th.sat {
     transform: translateY(20px); 
 }
 
-/* Responsive Navbar*/
+/* ===========================
+   Responsive navbar
+=========================== */
 @media (max-width: 768px) {
     .navbar {
         flex-direction:row;

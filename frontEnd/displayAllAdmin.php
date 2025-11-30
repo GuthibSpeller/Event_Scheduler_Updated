@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styling/displayalladmins.css">
+    <link rel="stylesheet" href="styling/displayalladmin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Super Admin Dashboard</title>
@@ -26,7 +26,7 @@
 
     <!-- GLASS TABLE CONTAINER -->
     <div class="table-container">
-        <table class="glass-table">
+        <table class="table">
             <thead>
                 <tr>
                     <th>First&nbsp;Name</th>

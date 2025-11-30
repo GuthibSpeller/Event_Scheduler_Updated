@@ -139,11 +139,11 @@
         const error = document.getElementById('error');
         if (!error) return;
 
-        error.style.display = 'flex';   // must set display first
+        error.style.display = 'flex';   
         error.classList.remove('hide');
         error.classList.add('show');
 
-        // setup click outside to hide
+        // setups click outside to hide
         hideNewPassErrorOnClickOutside();
     }
 
@@ -173,7 +173,7 @@
         if (edit) edit.style.display = "none";
     }
 
-    //Search bar function
+    //Search bar functions
     //Closes search modal upon clicking
     function closeSearchModal() {
         document.getElementById('searchModal').style.display = 'none';
@@ -181,7 +181,6 @@
 
     //Close search modal if clicked outside
     searchModal.addEventListener('click', (e) => {
-        // If the click is on the modal background, not on the content → close it
         if (e.target === searchModal) {
             searchModal.style.display = 'none';
         }
@@ -286,7 +285,7 @@
         }, 300); // match CSS transition duration
     }
 
-        // hide when clicking outside
+    // hide when clicking outside
     function hideNewPassErrorOnClickOutside() {
         const error = document.getElementById('error');
         if (!error) return;

@@ -1,4 +1,6 @@
-/* Global reset */
+/* ===========================
+   General Resets
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Body scrollable and spacing for title */
+/* Body with gradient background and scrolling*/
 body.login-page {
     min-height: 100vh;
     display: flex;
@@ -14,12 +16,12 @@ body.login-page {
     align-items: flex-start;
     background: linear-gradient(135deg, #6a0dad, #1e3c72);
     overflow-y: auto;
-    padding-top: 120px; /* space for fixed title */
+    padding-top: 120px; 
 }
 
-/* Apply to scrollable container */
+/* Scrollable container */
 .form-container::-webkit-scrollbar {
-    width: 10px;          /* width of the scrollbar */
+    width: 10px;          
 }
 
 .form-container::-webkit-scrollbar-track {
@@ -43,7 +45,9 @@ body.login-page {
     scrollbar-color: #8a2bee rgba(255,255,255,0.1);
 }
 
-/* Fixed title container */
+/* ===========================
+   Navbar
+=========================== */
 .title-container {
     position: fixed;
     top: 20px;
@@ -84,7 +88,9 @@ body.login-page {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 8px rgba(138,43,226,0.6);
 }
 
-/* Form container */
+/* ===========================
+   Form Container
+=========================== */
 .form-container {
     width: 400px;
     max-width: 90%;
@@ -97,7 +103,9 @@ body.login-page {
     overflow-y: auto;
 }
 
-/* Input container */
+/* ===========================
+   Input Fields
+=========================== */
 .input-container {
     padding: 20px;
     background: rgba(255,255,255,0.1);
@@ -136,7 +144,9 @@ body.login-page {
     transform: scale(1.05);
 }
 
-/* Radio group container */
+/* ===========================
+   Radio Buttons
+=========================== */
 .radio-group-container {
     margin  : 30px;
     text-align: center;
@@ -162,7 +172,9 @@ body.login-page {
     accent-color: #007c04;
 }
 
-/* Buttons */
+/* ===========================
+   Submit and Back Buttons
+=========================== */
 .subbutton, .backbutton {
     width: 100%;
     padding: 12px;
@@ -184,8 +196,9 @@ body.login-page {
 }
 
 
-
-/* Dropdown options */
+/* ===========================
+   Dropdown Select Styling
+=========================== */
 .select-control option {
     background: rgba(65,0,127,0.9);
     color: white;

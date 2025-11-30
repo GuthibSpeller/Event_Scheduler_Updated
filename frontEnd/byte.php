@@ -38,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styling/AdminAllOrgs.css">
+    <link rel="stylesheet" href="styling/AdminAllOrg.css">
     <script src="eventscript.js" defer></script>
     <title>BYTE</title>
 </head>
@@ -120,7 +120,7 @@
             <br>
             <div>
                 <label for="event_status">Status</label>
-                <select name="event_status" required class="modal-input">
+                <select name="event_status" class="modal-input" required >
                     <option value="Pending" <?= ($use_get['event_status'] == 'pending') ? 'selected' : '' ?>>Pending</option>
                     <option value="Completed" <?= ($use_get['event_status'] == 'completed') ? 'selected' : '' ?>>Completed</option>
                     <option value="Cancelled" <?= ($use_get['event_status'] == 'cancelled') ? 'selected' : '' ?>>Cancelled</option>
